@@ -6,12 +6,14 @@ import { GenerateInvoice } from "./services/create.service";
 import { DeleteInvoiceService } from "./services/delete.service";
 import { UpdateInvoiceService } from "./services/update.service";
 import { InvoiceByCustomerService } from "./services/customer-invoices.service";
+import { StaticTypesService } from "./services/static-types.service";
 
 const app = new Hono();
 const openapi = fromHono(app, {
 	docs_url: "/",
 });
 
+openapi.get("/api/v0.1/invoice/static-enums", StaticTypesService);
 openapi.get("/api/v0.1/invoice", ListAllInvoice);
 openapi.post("/api/v0.1/invoice/create", GenerateInvoice);
 openapi.get("/api/v0.1/invoice/one/:id", OneInvoiceService);
