@@ -11,7 +11,7 @@ The Billing Engine Worker is tasked with generating invoices for customers based
 
 1. Clone the repository:
    ```bash  
-   git clone <REPOSITORY_URL>  
+   git clone https://github.com/azam1144/cfw-invoice-engine.git  
    cd subscription  
 
 2. Install dependencies:
